@@ -20,7 +20,31 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#load').click(function () {
         for (var i = 0; i < movie_list.length; i++) {
-            $('#main').append(movie_list[i].content);
+            var moviedivs = $('<button>',{
+                class: 'col-xs-6 btn btn-warning',
+                id: movie_list[i].title,
+                html: movie_list[i].title
+            })
+            $('.container').append(moviedivs);
+
         }
     })
 })
+
+
+/*
+$(document).ready(function(){
+    $('#utube').click(function(){
+        $.ajax({
+            dataType:'json',
+            type:"GET",
+            url: 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
+            query: 'cats',
+            maxResults: 5,
+            success: function(results){
+                console.log(results);
+            }
+        })
+    })
+})
+    */
