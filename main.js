@@ -161,16 +161,6 @@ var search_tweets= '';
     };
 
 
-    
-
-    // $.ajax({
-    // 	dataType: 'json'
-    // 	url: "https://api.twitter.com/1.0/statuses/oembed.json?id="
-    // })
-
-
-
-
 
 /**********************************************************
  CLICK FUNCTION
