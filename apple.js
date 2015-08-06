@@ -23,14 +23,14 @@ $(document).ready(function () {
                 var movieImg = $('<img>', {
                     class: 'images',
                     src: newstring,
-                    title: movie_list[i]['title']
+                    title: movie_list[i]['title'],
+                    'data-toggle': "modal",
+                    'data-target': "#myModal"
                 });
-                ////CLICK HANDLER
-                movieImg.click(function(){console.log('made in the jquery dom creation section')});
                 $(innerdiv).append(movieImg);
                 $(outerdiv).append(innerdiv);
                 $('#content').append(outerdiv);
-
             }
         }, 20);
 });
+
