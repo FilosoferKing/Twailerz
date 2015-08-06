@@ -80,6 +80,7 @@ $(document).ready(function () {
 function cut_title() {
     title_cut = title.substring(title.lastIndexOf("-") - 1, title.lastIndexOf(title.length));
     console.log("Cut title: ", title_cut);
+    search_tweets = title_cut;
 }
 
 function post_title() {
@@ -102,7 +103,7 @@ function post_synopsis(){
 var global_result;//global variable to check out the array
 var tweets_array = [];//array used to store the text of the most recent tweets
 var num_of_tweets_to_use = 3;//variable to designate the number of recent tweets we want to use
-var search_tweets;
+var search_tweets= '';
 
 
 /*****************
@@ -111,9 +112,12 @@ var search_tweets;
  **Output: Specified Number of divs with twitter image and text of tweet
  *****************/
 
-$(document).ready(function () {
-    $('button').click(function () {//make sure this targets the right button/buttons
+
+    function load_twitter(){//make sure this targets the right button/buttons
+
         console.log('click initiated');
+        
+        console.log('search_tweets: ' + search_tweets);
         $.ajax({ //grabs the twitter API
             dataType: 'json',
             url: "http://s-apis.learningfuze.com/hackathon/twitter/index.php",
@@ -134,8 +138,8 @@ $(document).ready(function () {
                         src: 'https://cdn1.iconfinder.com/data/icons/logotypes/32/square-twitter-48.png',
                     });
 
-                    var send_tweets_div = $("<div>", {//dynamically creates the div container to contain the tweet and image
-                        css: 'width:600px height: 40px',//the size and look of this need to eventually be adjusted
+                    var send_tweets_div = $("<div>",{//dynamically creates the div container to contain the tweet and image
+
                         class: 'add_tweet',
                         'tweet_index': i,//each div will be assigned with a tweet_index equivalent to the array number
                     });
@@ -144,8 +148,9 @@ $(document).ready(function () {
                         text: tweet_statuses[i]['text'],
                     });
 
-                    send_tweets_div.append(send_tweets_img, send_tweets_text)//does the appropriate appending
-                    $('#main').append(send_tweets_div);
+                    send_tweets_div.append(send_tweets_img,send_tweets_text)//does the appropriate appending
+                    $('.twitter_target').append(send_tweets_div);
+
                 }
 
 
@@ -153,9 +158,10 @@ $(document).ready(function () {
 
 
         });
+    };
 
 
-    });
+    
 
     // $.ajax({
     // 	dataType: 'json'
@@ -163,7 +169,7 @@ $(document).ready(function () {
     // })
 
 
-});
+
 
 
 /**********************************************************
@@ -179,6 +185,8 @@ $(document).ready(function () {
         post_title();
         youtube_attach();
         post_synopsis();
+        load_twitter();
+
     });
 
     $(".modal-wide").on("show.bs.modal", function () {
