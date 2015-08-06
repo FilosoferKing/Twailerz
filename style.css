@@ -1,7 +1,8 @@
 
 .modal.modal-wide .modal-dialog {
-    width: 70%;
+    width: 70vw;
 }
+
 .modal-wide .modal-body {
     overflow-y: auto;
 }
@@ -9,11 +10,10 @@
 .images {
     width: 100%;
 }
+
 .col-sm-3 {
     margin: 25px auto;
 }
-
-
 
 .frame_div {
     position: relative;
@@ -25,4 +25,8 @@
 .iframe {
     width: 40vw;
     height: 40vh;
+}
+
+.col-sm-6 {
+    width: 40vh;
 }
