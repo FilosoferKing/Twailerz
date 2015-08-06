@@ -44,3 +44,9 @@
     height: 35vh;
     overflow: auto;
 }
+
+.add_tweet {
+	border: 1px solid #55acee;
+	margin: 3px;
+}
+

@@ -136,16 +136,20 @@ var search_tweets= '';
 
                     var send_tweets_img = $("<img>", { //creates the twitter image to dynamically add to html
                         src: 'https://cdn1.iconfinder.com/data/icons/logotypes/32/square-twitter-48.png',
+                        class: 'tweet_img',
+                        class: 'col-xs-2'
                     });
 
-                    var send_tweets_div = $("<div>",{//dynamically creates the div container to contain the tweet and image
+                    var send_tweets_div = $("<span>",{//dynamically creates the div container to contain the tweet and image
 
-                        class: 'add_tweet',
+                        
+                        class: 'col-xs-10 add_tweet',
                         'tweet_index': i,//each div will be assigned with a tweet_index equivalent to the array number
                     });
 
-                    var send_tweets_text = $('<span>', {//dynamically creates the text from the most recent tweets
-                        text: tweet_statuses[i]['text'],
+                    var send_tweets_text = $('<div>', {//dynamically creates the text from the most recent tweets
+                        html: tweet_statuses[i]['text'],
+                        class: 'tweet_text',
                     });
 
                     send_tweets_div.append(send_tweets_img,send_tweets_text)//does the appropriate appending
