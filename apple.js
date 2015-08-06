@@ -15,18 +15,22 @@ $(document).ready(function () {
                 var str = movie_list[i]['content'];
                 var newstring = str.substring(str.lastIndexOf("img src=") + 9, str.lastIndexOf(".jpg") + 4);
                 var outerdiv = $('<div>', {
-                    class: 'col-sm-3'
+                    class: 'col-sm-3 outerdiv'
                 });
                 var innerdiv = $('<div>', {
-                    class: 'col-sm-12'
+                    class: 'col-sm-12 innerdiv'
                 });
                 var movieImg = $('<img>', {
+                    class: 'images',
                     src: newstring,
-                    id: movie_list[i]['.title']
+                    title: movie_list[i]['title']
                 });
+                ////CLICK HANDLER
+                movieImg.click(function(){console.log('made in the jquery dom creation section')});
                 $(innerdiv).append(movieImg);
                 $(outerdiv).append(innerdiv);
                 $('#content').append(outerdiv);
+
             }
         }, 20);
 });
