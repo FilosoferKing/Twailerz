@@ -12,7 +12,7 @@ function pull_video(){
         url: 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
         method: 'post',
         data: {
-            query: "Superman",
+            query: title,
             maxResults: 10
         },
         crossDomain: true,
