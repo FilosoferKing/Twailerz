@@ -1,6 +1,6 @@
 
 .modal.modal-wide .modal-dialog {
-    width: 70%;
+    width: 70vw;
 }
 .modal-wide .modal-body {
     overflow-y: auto;
