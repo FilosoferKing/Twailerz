@@ -1,3 +1,12 @@
+body {
+    background: #000 url('img/twailerzbg.png') no-repeat 50% 50% fixed;
+
+
+}
+
+#title {
+    margin: 0 auto;
+}
 
 .modal.modal-wide .modal-dialog {
     width: 70vw;
@@ -45,8 +54,16 @@
     overflow: auto;
 }
 
+
 .add_tweet {
 	border: 1px solid #55acee;
 	margin: 3px;
+}
+
+
+.images {
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #fff;
+
 }
 

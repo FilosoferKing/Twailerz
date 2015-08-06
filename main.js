@@ -56,7 +56,7 @@ $(document).ready(function () {
                 console.log('looping');
                 var str = movie_list[i]['content'];
                 var newstring = str.substring(str.lastIndexOf("img src=") + 9, str.lastIndexOf(".jpg") + 4);
-                synopsis = str.substring(str.lastIndexOf("12px") + 6, str.lastIndexOf('span>') - 4);
+                //synopsis = str.substring(str.lastIndexOf("12px") + 6, str.lastIndexOf('span>') - 4);
                 var outerdiv = $('<div>', {
                     class: 'col-sm-3 outerdiv'
                 });
@@ -68,12 +68,14 @@ $(document).ready(function () {
                     src: newstring,
                     title: movie_list[i]['title'],
                     'data-toggle': "modal",
-                    'data-target': "#myModal"
+                    'data-target': "#myModal",
+                    'DIndex': i
                 });
                 $(innerdiv).append(movieImg);
                 $(outerdiv).append(innerdiv);
                 $('#content').append(outerdiv);
             }
+
         }, 20);
 });
 
@@ -93,6 +95,8 @@ function post_title() {
 }
 
 function post_synopsis(){
+    synString = movie_list[currentIndex].content;
+    synopsis = synString.substring(synString.lastIndexOf("12px") + 6, synString.lastIndexOf('span>') - 4);
     $('.text_target').append(synopsis);
 }
 
@@ -116,7 +120,7 @@ var search_tweets= '';
     function load_twitter(){//make sure this targets the right button/buttons
 
         console.log('click initiated');
-        
+
         console.log('search_tweets: ' + search_tweets);
         $.ajax({ //grabs the twitter API
             dataType: 'json',
@@ -176,6 +180,7 @@ $(document).ready(function () {
         $('.text_target').empty();
         $('.twitter_target').empty();
         title = $(this).attr('title');
+        currentIndex = $(this).attr('DIndex');
         console.log(title);
         cut_title();
         post_title();
