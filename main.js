@@ -102,7 +102,7 @@ function post_synopsis(){
 //Create GLOBAL variable below here on line 2
 var global_result;//global variable to check out the array
 var tweets_array = [];//array used to store the text of the most recent tweets
-var num_of_tweets_to_use = 3;//variable to designate the number of recent tweets we want to use
+var num_of_tweets_to_use = 15;//variable to designate the number of recent tweets we want to use
 var search_tweets= '';
 
 
@@ -169,6 +169,8 @@ $(document).ready(function () {
     $('body').on('click', '.images', function () {
         $('#main_title').remove();
         $('.frame_div').remove();
+        $('.text_target').empty();
+        $('.twitter_target').empty();
         title = $(this).attr('title');
         console.log(title);
         cut_title();
