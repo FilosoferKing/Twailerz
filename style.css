@@ -1,5 +1,5 @@
 body {
-    background: #000 url('img/twailerzbg.png') no-repeat 50% 50% fixed;
+    background: #f0f0f0 url('img/twailerzbg.png') no-repeat 50% 50% fixed;
 
 
 }
@@ -62,8 +62,8 @@ body {
 
 
 .images {
-    border-radius: 10px;
-    box-shadow: 0px 0px 2px #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px #000;
 
 }
 
