@@ -58,7 +58,7 @@ $(document).ready(function () {
                 var newstring = str.substring(str.lastIndexOf("img src=") + 9, str.lastIndexOf(".jpg") + 4);
                 //synopsis = str.substring(str.lastIndexOf("12px") + 6, str.lastIndexOf('span>') - 4);
                 var outerdiv = $('<div>', {
-                    class: 'col-sm-3 outerdiv'
+                    class: 'col-xs-6 col-sm-3 outerdiv'
                 });
                 var innerdiv = $('<div>', {
                     class: 'col-sm-12 innerdiv'
