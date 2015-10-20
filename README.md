@@ -14,7 +14,7 @@ trailer are pulled from the Twitter API and shown alongside the movie trailer an
 
 ##Project Notes
   * The first discussion my team had was in determining what we wanted to bring together. We determined 
-    that new trailers were always exciting and people are most liely curious what others opinions are of
+    that new trailers were always exciting and people are mostly curious what others opinions are of
     that movie. So we decided to bring them together in one place.
   * We worked as in a scrum environement, holding many meetings throughout,  utilizing stand-ups to communicate progress and     blockers to help determine where we were at and what could be done to improve upon our current position. This method was     very effective and combining the different aspects of our project making the merge seemless.
 
