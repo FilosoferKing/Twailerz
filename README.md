@@ -2,10 +2,13 @@
 
 ![Twailerz](/img/twailerzscreenshot.png)
 
-**Description**: The student grade table is an information table listing student names, courses and grades. <br>
+**Description**: Twailerz is a website that connects the latest tweets via twitter about an upcoming 
+movie and connects it with that trailer. It utilizes three different API's; Apple, YouTube and Twitter. 
+The list determining the latest movie trailers is pulled from the Apple Rss Feeds, along with the trailer image and description. The trailer video is pulled from the YouTube API. Then the most current tweets about that 
+trailer are pulled from the Twitter API and shown alongside the movie trailer and description.<br>
 
 ##Features
-* Total grade point average of all students.
+* 
 * Alphabetical organization option for student name and student course.
 * Add and delete students.
 * Auto completion on form for courses.
