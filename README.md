@@ -6,7 +6,8 @@
 movie and connects it with that trailer. It utilizes three different API's; Apple RSS Feeds, YouTube and Twitter. 
 The list determining the latest movie trailers is pulled from the Apple RSS Feeds, along with the trailer image and description. The trailer video is pulled from the YouTube API. Then the most current tweets about that 
 trailer are pulled from the Twitter API and shown alongside the movie trailer and description.<br>
-**Additional Notes**: This project was completed by Team T.A.T, which included myself and two others during a one day hackathon. The only criteria was to use API's of our choice to bring information together.
+**Additional Notes**: This project was completed by Team T.A.T, which included myself and two others during a one day hackathon. The only criteria was to use API's of our choice to bring information together. <br>
+<a href="http://www.trevorlinan.com/twailerz" target="_blank">View Project</a>
 
 ##Features
 * Every click brings you the most current and up-to-date information.
