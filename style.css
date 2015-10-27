@@ -18,12 +18,12 @@ body {
 }
 
 .modal.modal-wide .modal-dialog {
-    width: 70vw;
+    width: 90vw;
 }
 
 .modal-wide .modal-body {
-    height: 100vh;
-    overflow-y: hidden;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .images {
@@ -88,6 +88,17 @@ body {
         transform: translateX(-50%);
         width: 100vw;
     }
+
+    .modal.modal-wide .modal-dialog {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .modal-wide, .modal-content, .modal-body {
+        max-height: 90vh;
+        height: 90vh;
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -97,5 +108,16 @@ body {
        transform: translateX(-50%);
        width: 100vw;
    }
+
+    .modal.modal-wide .modal-dialog {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .modal-wide, .modal-content, .modal-body {
+        max-height: 90vh;
+        height: 90vh;
+        overflow-y: scroll;
+    }
 }
 
